@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web TWAIN - Scanner App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-viewer">
+            <div class="image-slot" id="image1">Image 1</div>
+            <div class="image-slot" id="image2">Image 2</div>
+            <div class="image-slot" id="image3">Image 3</div>
+            <div class="image-slot" id="image4">Image 4</div>
+        </div>
+        <div class="control-panel">
+            <h2>Select Source:</h2>
+            <select id="sourceSelect">
+                <option value="scanner1">TWAIN2 Freemage Software</option>
+            </select>
+            <div>
+                <label><input type="checkbox" id="showUI"> Show UI</label>
+                <label><input type="checkbox" id="autoFeeder"> AutoFeeder</label>
+            </div>
+            <div>
+                <label>Pixel Type:</label>
+                <label><input type="radio" name="pixelType" value="bw"> Black & White</label>
+                <label><input type="radio" name="pixelType" value="gray"> Gray</label>
+                <label><input type="radio" name="pixelType" value="color"> Color</label>
+            </div>
+            <div>
+                <label for="resolution">Resolution:</label>
+                <select id="resolution">
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button id="scanSave1" value="Scan" onclick="AcquireImage();">Scan and Save 1</button>
+                <input type="button"  onclick="AcquireImage();" />
+
+                <button id="scanSave2">Scan and Save 2</button>
+                <button id="removeBlank">Remove Blank Images</button>
+                <button id="removeAll">Remove All Images</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

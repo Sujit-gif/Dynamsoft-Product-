@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 29px;
+    margin-top: 10px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.image-viewer {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    height: 400px;
+}
+
+.image-slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+}
+
+.control-panel {
+    width: 40%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+select, input[type="checkbox"], input[type="radio"] {
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-viewer,
+    .control-panel {
+        width: 100%;
+    }
+}
